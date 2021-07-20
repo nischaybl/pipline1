@@ -1,5 +1,5 @@
 pipeline {
-	agent nano 
+	agent any 
 	stages {
 		stage('BUILD') {
 			agent 'agent1'
