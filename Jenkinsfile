@@ -1,5 +1,5 @@
 pipeline {
-	agent nano 
+	agent none
 	stages {
 		stage('BUILD') {
 			agent 'master'	
@@ -10,15 +10,21 @@ pipeline {
 					'''
 			}	
 		}
-		
+		parallel {
 		stage('TEST') {
 			agent 'test'	
-				steps {
+				steps ('TEST1') {
 					sh '''
 						echo This is the fist stage: TEST
-					'''
-			}	
-		}
+	      		}		'''
+				steps {'TEST2') {
+					sh '''
+						echo This is the fist stage: TEST
+			}		'''
+						
+		}	
+			
+	}
 		
 		stage('DEPLOY') {
 			agent 'master'
