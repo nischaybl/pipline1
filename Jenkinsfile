@@ -8,7 +8,8 @@ pipeline {
 					sleep 5
 					echo This is the fist stage: BUILD
 				'''
-			}	
+			}
+		}	
 		
 		stage('TEST') {
 			parallel { 
