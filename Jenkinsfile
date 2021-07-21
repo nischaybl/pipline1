@@ -2,7 +2,6 @@ pipeline {
 	agent any 
 	stages {
 		stage('BUILD') {
-			agent 'agent1'
 			steps {
 				sh '''
 					pwd
@@ -13,7 +12,6 @@ pipeline {
 		}
 		
 		stage('TEST') {
-			agent 'master'
 			steps {
 				sh '''
 					pwd
@@ -24,7 +22,6 @@ pipeline {
 		}
 		
 		stage('DEPLOY') {
-			agent 'agent1'
 			steps {
 				sh '''
 					pwd
