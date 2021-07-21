@@ -33,7 +33,8 @@ pipeline {
 						pwd
 						echo This is the fist stage: DEPLOY
 					'''
-			}	
-		}
+				}	
+			}
+	`	}
 	}
 }
