@@ -2,7 +2,7 @@ pipeline {
 	agent none
 	stages {
 		stage('BUILD') {
-			agent 'master'	
+			agent 'slave'	
 				steps {
 					sh '''
 						pwd
@@ -12,7 +12,7 @@ pipeline {
 		}
 		parallel {
 		stage('TEST') {
-			agent 'test'	
+			agent 'master'	
 				steps ('TEST1') {
 					sh '''
 						echo This is the fist stage: TEST
@@ -27,7 +27,7 @@ pipeline {
 	}
 		
 		stage('DEPLOY') {
-			agent 'master'
+			agent 'slave'
 				steps {
 					sh '''
 						pwd
