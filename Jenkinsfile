@@ -17,7 +17,7 @@ pipeline {
 					sh '''
 						echo This is the fist stage: TEST
 	      		}		'''
-				steps {'TEST2') {
+				steps ('TEST2') {
 					sh '''
 						echo This is the fist stage: TEST
 			}		'''
