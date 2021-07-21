@@ -5,7 +5,6 @@ pipeline {
 			steps {
 				sh '''
 					pwd
-					sleep 5
 					echo This is the fist stage: BUILD
 				'''
 			}	
@@ -14,8 +13,6 @@ pipeline {
 		stage('TEST') {
 			steps {
 				sh '''
-					pwd
-					sleep 5
 					echo This is the fist stage: TEST
 				'''
 			}	
@@ -25,7 +22,6 @@ pipeline {
 			steps {
 				sh '''
 					pwd
-					sleep 5
 					echo This is the fist stage: DEPLOY
 				'''
 			}	
